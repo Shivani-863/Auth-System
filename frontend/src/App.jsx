@@ -27,7 +27,7 @@ const ProtectedRoute = ({ children }) => {
 		if (isAuthenticated && user.isVerified) {
 		return <Navigate to='/' replace />;
 	}
-
+	}
 	return children;
 };
 
