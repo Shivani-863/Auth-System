@@ -17,16 +17,14 @@ import { useEffect } from "react";
 // protect routes that require authentication
 const ProtectedRoute = ({ children }) => {
 	const { isAuthenticated, user } = useAuthStore();
-
+        if (isAuthenticated && user.isVerified) {
+		return <Navigate to='/' replace />;}
 	if (!isAuthenticated) {
 		return <Navigate to='/login' replace />;
 	}
 
 	if (!user.isVerified) {
 		 <Navigate to='/verify-email' replace />;
-		const { isAuthenticated, user } = useAuthStore();
-		if (isAuthenticated && user.isVerified) {
-		return <Navigate to='/' replace />;
 	}
 	}
 	return children;
