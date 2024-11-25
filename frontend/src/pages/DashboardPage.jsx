@@ -7,6 +7,10 @@ const DashboardPage = () => {
 
 	const handleLogout = () => {
 		logout();
+		const { isAuthenticated, user } = useAuthStore();
+	if (!isAuthenticated) {
+		return <Navigate to='/login' replace />;
+	}
 	};
 	return (
 		<motion.div
