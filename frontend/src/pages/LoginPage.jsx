@@ -52,7 +52,7 @@ const LoginPage = () => {
 							Forgot password?
 						</Link>
 					</div>
-					{error && <p className='text-red-500 font-semibold mb-2'>{error}</p>}
+					{error && <p id="error-message" className='text-red-500 font-semibold mb-2'>{error}</p>}
 
 					<motion.button
 						whileHover={{ scale: 1.02 }}
@@ -73,6 +73,15 @@ const LoginPage = () => {
 					</Link>
 				</p>
 			</div>
+			<script>
+    // Function to hide the error message after 3 seconds
+    setTimeout(() => {
+      const errorMessage = document.getElementById('error-message');
+      if (errorMessage) {
+        errorMessage.classList.add('hidden');
+      }
+    }, 3000); // 3000ms = 3 seconds
+  </script>
 		</motion.div>
 	);
 };
