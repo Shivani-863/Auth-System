@@ -41,6 +41,7 @@ const SignUpPage = () => {
 					<Input
 						icon={User}
 						type='text'
+						required
 						placeholder='Full Name'
 						value={name}
 						onChange={(e) => setName(e.target.value)}
@@ -48,6 +49,7 @@ const SignUpPage = () => {
 					<Input
 						icon={Mail}
 						type='email'
+						required
 						placeholder='Email Address'
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
@@ -55,6 +57,7 @@ const SignUpPage = () => {
 					<Input
 						icon={Lock}
 						type='password'
+						required
 						placeholder='Password'
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
