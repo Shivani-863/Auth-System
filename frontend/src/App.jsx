@@ -18,7 +18,7 @@ import { useEffect } from "react";
 const ProtectedRoute = ({ children }) => {
 	const { isAuthenticated, user } = useAuthStore();
         if (isAuthenticated && user.isVerified) {
-		return <Navigate to='/' replace />;}
+		return <Navigate to='/Dashboard' replace />;}
 	if (!isAuthenticated) {
 		return <Navigate to='/login' replace />;
 	}
@@ -34,7 +34,7 @@ const RedirectAuthenticatedUser = ({ children }) => {
 	const { isAuthenticated, user } = useAuthStore();
 
 	if (isAuthenticated && user.isVerified) {
-		return <Navigate to='/' replace />;
+		return <Navigate to='/Dashboard' replace />;
 	}
 
 	return children;
@@ -63,6 +63,12 @@ function App() {
 						<ProtectedRoute>
 							<DashboardPage />
 						</ProtectedRoute>
+					}
+				/>
+	                       <Route
+					path='/Dashboard'
+					element={
+							<DashboardPage />
 					}
 				/>
 				<Route
