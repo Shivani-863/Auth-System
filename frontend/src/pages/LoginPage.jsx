@@ -81,13 +81,12 @@ const LoginPage = () => {
 				</p>
 			</div>
 			<script>
-    // Function to hide the error message after 3 seconds
     setTimeout(() => {
       const errorMessage = document.getElementById('error-message');
       if (errorMessage) {
         errorMessage.classList.add('hidden');
       }
-    }, 3000); // 3000ms = 3 seconds
+    }, 3000);
   </script>
 		</motion.div>
 	);
