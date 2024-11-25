@@ -23,13 +23,6 @@ const LoginPage = () => {
 			transition={{ duration: 0.5 }}
 			className='max-w-md w-full bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden'
 		>
-			 <style>
-                         {`
-                        .hidden {
-                             display: none;
-                                }
-                         `}
-			 </style>
 			<div className='p-8'>
 				<h2 className='text-3xl font-bold mb-6 text-center bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text'>
 					Welcome Back
@@ -80,15 +73,7 @@ const LoginPage = () => {
 					</Link>
 				</p>
 			</div>
-			<script>
-    setTimeout(() => {
-      const errorMessage = document.getElementById('error-message');
-      if (errorMessage) {
-        errorMessage.classList.add('hidden');
-      }
-    }, 3000);
-  </script>
-		</motion.div>
+			</motion.div>
 	);
 };
 export default LoginPage;
