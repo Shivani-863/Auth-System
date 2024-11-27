@@ -23,7 +23,10 @@ const ProtectedRoute = ({ children }) => {
 	}
 
 	if (!user.isVerified) {
-		return <Navigate to='/verify-email' replace />;
+		setTimeout(()=>{
+		    return <Navigate to='/verify-email' replace />;
+		               },600000)
+		
 	}
 
 	return children;
